@@ -36,6 +36,12 @@ app.get('/metrics.json', (req, res) => {
   })
 })
 
+app.use(function(req, res, next){
+  res.setHeader('Content-Type', 'text/plain');
+  res.status(404).send('Page introuvable !');
+});
+
+
 
 app.listen(
   app.get('port'), 
