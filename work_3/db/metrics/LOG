@@ -1,0 +1,6 @@
+2019/12/07-11:34:01.396 2d04 Recovering log #52
+2019/12/07-11:34:01.397 2d04 Level-0 table #54: started
+2019/12/07-11:34:01.423 2d04 Level-0 table #54: 202 bytes OK
+2019/12/07-11:34:01.441 2d04 Delete type=0 #52
+2019/12/07-11:34:01.442 2d04 Delete type=3 #50
+2019/12/07-11:34:01.446 890c Moved #48 to level-1 212 bytes OK: files[ 3 2 0 0 0 0 0 ]
