@@ -2,7 +2,7 @@
 
 # Badges #
 
-[![Travis](https://travis-ci.org/OmerFaruk69/Projet_Node_JS)
+[![Build Status](https://travis-ci.org/OmerFaruk69/Projet_Node_JS)
 
 
 ## Introduction
