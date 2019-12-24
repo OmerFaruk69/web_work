@@ -3,7 +3,12 @@
 
 ## Introduction
 
-The basic Node.js project.
+### What we use ? 
+
+- [x] `Language` : NodeJS, EJS, express,CSS, HTML.
+- [x] `Database` : LevelDB.
+- [x] `CI/CD` : Travis-CI. 
+- [x] `Unit Test` : Mocha/Chai, Nodejs. 
 
 ## Installing
 
@@ -18,6 +23,10 @@ npm install
 ```bash
 npm run build
 ```
+## Pre-populate 
+```bash
+npm run populate
+```
 
 ## Development
 
@@ -26,7 +35,7 @@ npm run dev
 ```
 
 
-# Contributors #
+## Contributors 
 
 - Santos Bruno Gr02 SI ECE (email : Bruno.santos@edu.ece.fr )
 - Kiziltoprak Omer-Faruk Gr02 SI ECE (email :omerfaruk.kiziltoprak@edu.ece.fr)
