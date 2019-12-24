@@ -1,8 +1,6 @@
 # Projet_NodeJS#
 
-# Badges #
 
-[![Build Status](https://travis-ci.org/OmerFaruk69/Projet_Node_JS)
 
 
 ## Introduction
@@ -11,7 +9,7 @@
 
 - [x] `Language` : NodeJS, EJS, express,CSS, HTML.
 - [x] `Database` : LevelDB.
-- [x] `CI/CD` : Travis-CI. 
+- [x] `CI/CD` : Travis-CI: https://travis-ci.org/OmerFaruk69/Projet_Node_JS 
 - [x] `Unit Test` : Mocha/Chai, Nodejs. 
 
 ## Installing
