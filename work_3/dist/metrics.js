@@ -28,37 +28,63 @@ var MetricsHandler = /** @class */ (function () {
         stream.end();
     };
     // on instancie deux metrics 
-    MetricsHandler.get = function (callback) {
-        var result = [
-            new Metric('2013-11-04 14:00 UTC', 12),
-            new Metric('2013-11-04 14:30 UTC', 15)
-        ];
-        callback(null, result);
-    };
-    MetricsHandler.prototype.getAll = function (callback) {
-        var metrics = [];
-        // try to read this memory
-        this.db.createReadStream()
-            // Read
+    MetricsHandler.prototype.get = function (key, callback) {
+        var stream = this.db.createReadStream();
+        var met = [];
+        stream.on('error', callback)
             .on('data', function (data) {
-            console.log(data.key, '=', data.value);
-            var timestamp = data.key.split(':');
-            var metric = new Metric(timestamp, data.value);
-            metrics.push(data);
-            // callback fct is getAll 
-        })
-            .on('error', function (err) {
-            console.log('Oh my!', err);
-            callback(err, null);
-        })
-            .on('close', function () {
-            console.log('Stream closed');
-            callback(null, metrics);
-        })
-            .on('end', function () {
-            console.log('Stream ended');
+            var _a = data.key.split(":"), metrics = _a[0], name = _a[1], k = _a[2];
+            if (key != name) {
+            }
+            else {
+                console.log(data.key, ' = ', data.value);
+            }
+        });
+    };
+    MetricsHandler.prototype.del = function (key, callback) {
+        var _this = this;
+        console.log("\nKey to delete: " + key + "\n");
+        var stream = this.db
+            .createKeyStream()
+            .on('error', callback)
+            .on('data', function (data) {
+            if (data.split(":")[1] === key) {
+                _this.db.del(data, function (err) {
+                });
+                console.log("Metrics deleted !");
+            }
         });
     };
     return MetricsHandler;
 }());
 exports.MetricsHandler = MetricsHandler;
+/*
+public getAll(
+  callback: (error:Error |null,result:any)=> void
+  )
+  {
+    let metrics : Metric [] = []
+    // try to read this memory
+    this.db.createReadStream()
+    // Read
+.on('data', function (data) {
+  console.log(data.key, '=', data.value)
+  const timestamp = data.key.split(':')
+  let metric:Metric = new Metric(timestamp,data.value)
+  metrics.push(data)
+  // callback fct is getAll
+})
+.on('error', function (err) {
+  console.log('Oh my!', err)
+  callback(err,null)
+})
+.on('close', function () {
+  console.log('Stream closed')
+  callback(null,metrics)
+})
+.on('end', function () {
+  console.log('Stream ended')
+
+})
+  }
+*/

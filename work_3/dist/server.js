@@ -22,33 +22,25 @@ var db = levelup_1.default(encoding_down_1.default(leveldown_1.default("path"), 
 app.get('/hello/Omer', function (req, res) { return res.render('hello.ejs', { name: "Omer etudiant a l'ECE Paris" }); });
 app.get('/hello/:name', function (req, res) { return res.render('hello.ejs', { name: req.params.name }); });
 app.get('/', function (req, res) { return res.render('home.ejs'); });
-app.get('/metrics.json', function (req, res) {
-    metrics_1.MetricsHandler.get(function (err, result) {
-        if (err) {
-            throw err;
-        }
-        res.json(result);
-    });
-});
-app.post('/metrics/', function (req, res) {
-    dbMet.getAll(function (err) {
-        if (err)
-            throw err;
-        res.status(200).send('okk');
-    });
-    app.post('/metrics/', function (req, res) {
-        dbMet.getAll(function (err, result) {
-            if (err)
-                throw err;
-            res.json(200).send(result);
-        });
-    });
-});
 app.post('/metrics/:id', function (req, res) {
     dbMet.save(req.params.id, req.body, function (err) {
         if (err)
             throw err;
-        res.status(200).send('okkkk');
+        res.status(200).send('save');
+    });
+});
+app.get('/metrics/:id', function (req, res) {
+    dbMet.get(req.params.id, function (err) {
+        if (err)
+            throw err;
+        res.status(200).send();
+    });
+});
+app.delete('/metrics/:id', function (req, res) {
+    dbMet.del(req.params.id, function (err) {
+        if (err)
+            throw err;
+        res.status(200).send();
     });
 });
 app.use(function (req, res, next) {
