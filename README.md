@@ -24,7 +24,6 @@ npm install
 npm run build
 ```
 ## Pre-populate 
-```bash
 npm run populate
 First User:
 -  `username` :paula 
@@ -33,12 +32,12 @@ First User:
 -  `Metric` : timestamp :24-12-2019-10-27, key :1, username :paula ,value :1. 
 
 Second User:
+
 -  `username` :jeana 
 - `email` : jeana@gmail.com.
 -  `password` : jeana. 
 -  `Metric` : timestamp :23-12-2019-11-27, key :2, username :jeana ,value :2. 
 
-```
 
 ## Development
 
