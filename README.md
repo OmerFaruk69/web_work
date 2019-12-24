@@ -26,8 +26,9 @@ npm run build
 ## Pre-populate 
 ```bash
 npm run populate
-```
 First User:
+```
+
 -  `username` :paula 
 - `email` : paula@gmail.com.
 -  `password` : paula. 
