@@ -25,5 +25,9 @@ npm run build
 npm run dev
 ```
 
-## Contributors
+
+# Contributors #
+
+- Santos Bruno Gr02 SI ECE (email : Bruno.santos@edu.ece.fr )
+- Kiziltoprak Omer-Faruk Gr02 SI ECE (email :omerfaruk.kiziltoprak@edu.ece.fr)
 
