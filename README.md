@@ -1,5 +1,9 @@
 # Projet_NodeJS#
 
+# Badges #
+
+[![Build Status](https://travis-ci.org/OmerFaruk69/Projet_Node_JS?fbclid=IwAR3lwqhuPJf07v4OVHXmQ7--XSMtTkCJi24QwWSzJu2YohVnR0XzQtc-TR8)](https://travis-ci.org/OmerFaruk69/Projet_Node_JS)
+
 
 ## Introduction
 
@@ -31,7 +35,7 @@ First User:
 -  `username` :paula 
 - `email` : paula@gmail.com.
 -  `password` : paula. 
--  `Metric` : timestamp:24-12-2019-10-27, key:1, username:paula , value :1. 
+-  `Metric` : timestamp:24-12-2019-10-27, key:1, username:paula , value:1. 
 
 Second User:
 
